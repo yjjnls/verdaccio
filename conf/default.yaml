@@ -7,7 +7,7 @@
 #
 
 # path to a directory with all packages
-storage: ./storage
+storage: /dev/data/npm/storage
 # path to a directory with plugins to include
 plugins: ./plugins
 
@@ -18,7 +18,7 @@ web:
 
 auth:
   htpasswd:
-    file: ./htpasswd
+    file: /dev/data/npm/htpasswd
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
     #max_users: 1000
@@ -60,3 +60,4 @@ logs:
   - {type: stdout, format: pretty, level: http}
   #- {type: file, path: verdaccio.log, level: info}
 
+listen: 0.0.0.0:4873
